@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.praat.Praat</id>
+  
+  <name>Praat Speech Analyzer</name>
+  <summary>Analyze, synthesize, and manipulate speech</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <description>
+    <p>
+      Welcome to Praat! Praat is a speech analysis tool used for doing phonetics by computer. Praat can analyse, synthesize, and manipulate speech, and create high-quality pictures for your publications. Praat was created by Paul Boersma and David Weenink of the Institute of Phonetics Sciences of the University of Amsterdam.
+    </p>
+    <p>
+      Some of Praat’s most prominent features are:
+    </p>
+    <p>
+      <em>Speech analysis</em>
+    </p>
+    <p>
+      Praat allows you to analyze different aspects of speech including pitch, formant, intensity, and voice quality. You have access to spectrograms (a visual representation of sound changing over time) and cochleagrams (a specific type of spectrogram more closely resembling how the inner ear receives sound).
+    </p>
+    <p>
+      <em>Speech synthesis</em>
+    </p>
+    <p>
+      Praat allows you to generate speech from a pitch curve and filters that you create (acoustic synthesis), or from muscle activities (articulatory synthesis).
+    </p>
+    <p>
+      <em>Speech manipulation</em>
+    </p>
+    <p>
+      Praat gives you the ability to modify existing speech utterances. You can alter pitch, intensity, and duration of speech.
+    </p>
+    <p>
+      <em>Speech labelling</em>
+    </p>
+    <p>
+      Praat allows you to custom-label your samples using the IPA (International Phonetics Alphabet), and annotate your sound segments based on the particular variables you are seeking to analyze. Multi-language text-to-speech facilities allow you to segment the sound into words and phonemes.
+    </p>
+    <p>
+      <em>Grammar models</em>
+    </p>
+    <p>
+      With Praat, you can try out Optimality-Theoretic and Harmonic-Grammar learning, as well as several kinds of neural-network models.
+    </p>
+    <p>
+      <em>Statistical analysis</em>
+    </p>
+    <p>
+      Praat allows you to perform several statistical techniques, among which multidimensional scaling, principal component analysis, and discriminant analysis.
+    </p>
+    <p>
+      For more information, consult the extensive manual in Praat (under Help), and the website, which has Praat tutorials in several languages.
+    </p>
+  </description>
+
+  <url type="homepage">https://praat.org</url>
+
+  <developer id="nl.uva">
+    <name>University of Amsterdam</name>
+  </developer>
+
+  <content_rating type="oars-1.0" />
+
+  <icon type="stock">org.praat.Praat</icon>
+
+  <categories>
+    <category>Education</category>
+    <category>Science</category>
+  </categories>
+
+  <keywords>
+    <keyword>audio></keyword>
+    <keyword>sound</keyword>
+    <keyword>speech</keyword>
+    <keyword>phonetics</keyword>
+    <keyword>linguistics</keyword>
+  </keywords>
+
+  <launchable type="desktop-id">praat.desktop</launchable>
+</component>
