@@ -14,26 +14,21 @@ modules:
   - name: praat
     buildsystem: simple
     build-commands:
-      - install -Dm0644 org.praat.Praat.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
-      - install -Dm0644 org.praat.Praat.desktop -t ${FLATPAK_DEST}/share/applications/
-      - install -Dm0644 org.praat.Praat.svg -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/
-    sources:
-      - type: file
-        path: org.praat.Praat.metainfo.xml
-      - type: file
-        path: org.praat.Praat.desktop
-      - type: file
-        url: https://raw.githubusercontent.com/praat/praat.github.io/refs/heads/master/main/praat-480.svg
-        sha256: 57a78f6359453ad83e2524ce6645f07649a227f72abf9f6fd233c19f1d4cfc59
-        dest-filename: org.praat.Praat.svg
-  - name: praat-binary
-    buildsystem: simple
-    build-commands:
       - cp makefiles/makefile.defs.linux.pulse-gcc makefile.defs
       - make -j15
       - install -Dm0755 praat -t ${FLATPAK_DEST}/bin/
+      - install -Dm0644 main/praat-480.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.praat.Praat.svg
+      - sed -i 's/^Icon=praat$/Icon=org.praat.Praat/' main/praat.desktop
+      - install -Dm0644 main/praat.desktop ${FLATPAK_DEST}/share/applications/org.praat.Praat.desktop
     sources:
       - type: git
-        url: https://github.com/praat/praat.github.io
-        tag: v6.4.42
-        commit: d9172e87e129f1586f087a041fc0a94f89ce8a96
+        url: https://github.com/LinuxSBC/praat
+        # tag: v6.4.42
+        commit: ada0cac6b0d3b4f750ad6a2de06afc45bf058c48
+  - name: praat-metadata
+    buildsystem: simple
+    build-commands:
+      - install -Dm0644 org.praat.Praat.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
+    sources:
+      - type: file
+        path: org.praat.Praat.metainfo.xml

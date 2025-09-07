@@ -57,27 +57,56 @@
   </description>
 
   <url type="homepage">https://praat.org</url>
+  <url type="bugtracker">https://github.com/praat/praat.github.io/issues</url>
+  <url type="help">https://praat.org/manual/Intro.html</url>
+  <url type="vcs-browser">https://github.com/praat/praat.github.io</url>
 
   <developer id="nl.uva">
     <name>University of Amsterdam</name>
   </developer>
 
-  <content_rating type="oars-1.0" />
+  <content_rating type="oars-1.1" />
+
+  <releases>
+    <release version="6.4.42" date="2025-08-28">
+      <url type="details">https://github.com/praat/praat.github.io/releases/tag/v6.4.42</url>
+    </release>
+  </releases>
+
+  <provides>
+    <id>praat.desktop</id>
+  </provides>
 
   <icon type="stock">org.praat.Praat</icon>
 
   <categories>
     <category>Education</category>
     <category>Science</category>
+    <category>Audio</category>
+    <category>AudioVideo</category>
   </categories>
 
   <keywords>
-    <keyword>audio></keyword>
+    <keyword>audio</keyword>
     <keyword>sound</keyword>
     <keyword>speech</keyword>
     <keyword>phonetics</keyword>
     <keyword>linguistics</keyword>
   </keywords>
 
-  <launchable type="desktop-id">praat.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/LinuxSBC/praat-flatpak/main/screenshot-1.png</image>
+      <caption>Praat showing a spectrogram and pitch analysis of a speech sample</caption>
+    </screenshot>
+  </screenshots>
+
+  <!-- ONLY desktop supported -->
+  <requires>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <display_length compare="ge">768</display_length>
+  </requires>
+
+  <launchable type="desktop-id">org.praat.Praat.desktop</launchable>
 </component>
