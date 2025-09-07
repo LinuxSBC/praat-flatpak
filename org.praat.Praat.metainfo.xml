@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.praat.Praat</id>
   
-  <name>Praat Speech Analyzer</name>
+  <name>Praat</name>
   <summary>Analyze, synthesize, and manipulate speech</summary>
   
   <metadata_license>MIT</metadata_license>
@@ -68,9 +68,7 @@
   <content_rating type="oars-1.1" />
 
   <releases>
-    <release version="6.4.42" date="2025-08-28">
-      <url type="details">https://github.com/praat/praat.github.io/releases/tag/v6.4.42</url>
-    </release>
+    <release version="6.4.42" date="2025-08-28"></release>
   </releases>
 
   <provides>
@@ -101,12 +99,11 @@
     </screenshot>
   </screenshots>
 
-  <!-- ONLY desktop supported -->
-  <requires>
+  <recommends>
     <control>keyboard</control>
     <control>pointing</control>
     <display_length compare="ge">768</display_length>
-  </requires>
+  </recommends>
 
   <launchable type="desktop-id">org.praat.Praat.desktop</launchable>
 </component>
