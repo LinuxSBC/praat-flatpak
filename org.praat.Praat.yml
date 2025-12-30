@@ -16,7 +16,7 @@ modules:
   - name: praat
     buildsystem: simple
     build-commands:
-      - cp makefiles/makefile.defs.linux.pulse-gcc makefile.defs
+      - cp makefiles/makefile.defs.linux.pulse-gcc.LE makefile.defs
       - make -j15
       - install -Dm0755 praat -t ${FLATPAK_DEST}/bin/
       - install -Dm0644 main/praat-480.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.praat.Praat.svg
@@ -24,9 +24,9 @@ modules:
       - install -Dm0644 main/praat.desktop ${FLATPAK_DEST}/share/applications/org.praat.Praat.desktop
     sources:
       - type: git
-        url: https://github.com/LinuxSBC/praat
-        # tag: v6.4.42
-        commit: ada0cac6b0d3b4f750ad6a2de06afc45bf058c48
+        url: https://github.com/praat/praat.github.io
+        # tag: should be 6.4.51, but it's not out yet, so just the SHA of the necessary commit
+        commit: ab77efedd7d42017c3b54c27ac9d1eeb68924e16
   - name: praat-metadata
     buildsystem: simple
     build-commands:
