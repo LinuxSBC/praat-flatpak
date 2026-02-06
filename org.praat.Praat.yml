@@ -25,8 +25,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/praat/praat.github.io
-        # tag: 6.4.58
-        commit: 0bbe6e6a65cf149df401d68ccc28a8d6e0b6ecca
+        # tag: 6.4.59
+        commit: 2aa9e8e9767ecee0b49460f9a4004b5988b91116
   - name: praat-metadata
     buildsystem: simple
     build-commands:
