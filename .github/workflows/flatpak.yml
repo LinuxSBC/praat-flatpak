@@ -15,7 +15,7 @@ jobs:
           - arch: x86_64
             runner: ubuntu-latest
           - arch: aarch64
-            runner: ubuntu-latest-arm
+            runner: ubuntu-24.04-arm # ubuntu-latest-arm doesn't exist
     runs-on: ${{ matrix.variant.runner }}
     steps:
       - uses: actions/checkout@v4
